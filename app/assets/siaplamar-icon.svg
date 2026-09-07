@@ -1,0 +1,30 @@
+<!-- BRIEF: SiapLamar production icon — approved Dokumen Siap concept, blue CV document with a forward green check, readable at 24–32px. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">SiapLamar — Dokumen Siap</title>
+  <desc id="desc">Dokumen CV biru dengan tanda centang hijau yang bergerak maju.</desc>
+  <defs>
+    <linearGradient id="bg-gradient" x1="32" y1="24" x2="220" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2468AD"/><stop offset="1" stop-color="#123E72"/>
+    </linearGradient>
+    <linearGradient id="check-gradient" x1="72" y1="158" x2="202" y2="104" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#78D1AD"/><stop offset="1" stop-color="#35A37A"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0A223C" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <g id="background">
+    <rect x="16" y="16" width="224" height="224" rx="54" fill="url(#bg-gradient)"/>
+    <path d="M45 60C71 31 116 25 151 35" fill="none" stroke="#79B8F1" stroke-width="8" stroke-linecap="round" opacity=".35"/>
+  </g>
+  <g id="document" filter="url(#shadow)">
+    <path d="M66 50h82l42 42v112a12 12 0 0 1-12 12H66a12 12 0 0 1-12-12V62a12 12 0 0 1 12-12Z" fill="#F8FBFF"/>
+    <path d="M148 50v32a10 10 0 0 0 10 10h32Z" fill="#CFE4F7"/>
+    <path d="M78 92h46M78 116h76M78 140h54" stroke="#8BA6BE" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <g id="forward-check">
+    <path d="m77 166 28 27 70-75" fill="none" stroke="#15314D" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" opacity=".22" transform="translate(0 7)"/>
+    <path d="m77 166 28 27 70-75" fill="none" stroke="url(#check-gradient)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m167 119 31-2-4 30" fill="none" stroke="#35A37A" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

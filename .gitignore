@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+
+# Cloudflare Wrangler local cache (contains account identifiers)
+.wrangler/
+
+# Dependencies (none are used, but guard anyway)
+node_modules/
+
+# Local editor/tooling
+*.log
