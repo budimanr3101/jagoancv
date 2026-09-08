@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="JagoanCV adalah generator CV local-first dengan struktur yang ramah ATS.">
+  <meta name="robots" content="noindex,follow">
+  <title>JagoanCV — CV ATS Generator</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/jagoancv-icon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <script>try{const theme=localStorage.getItem("cv-ats-generator:theme");if(theme==="light"||theme==="dark")document.documentElement.dataset.theme=theme}catch{}</script>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-mobile-view="edit" data-doc-mode="cv">
+  <header class="app-header">
+    <a class="brand" href="./" data-i18n-aria="brand.home" aria-label="JagoanCV beranda"><img class="brand-mark" src="./assets/jagoancv-icon.svg" alt="" width="38" height="38" aria-hidden="true"><span class="brand-copy"><strong>JagoanCV</strong><small data-i18n="brand.tagline">CV ATS Generator</small></span></a>
+    <div class="doc-switch" role="group" data-i18n-aria="doc.group" aria-label="Dokumen aktif">
+      <button class="active" type="button" data-doc-mode="cv" aria-pressed="true" data-i18n="doc.cv">CV</button>
+      <button type="button" data-doc-mode="cover-letter" aria-pressed="false" data-i18n="doc.letter">Surat Lamaran</button>
+    </div>
+    <div class="save-state" id="save-state" role="status" aria-live="polite">
+      <span class="save-dot" aria-hidden="true"></span><span id="save-message">Memuat data lokal…</span>
+    </div>
+    <div class="header-actions">
+      <button class="button" id="pdf-button" type="button" data-i18n="action.exportPdf">Ekspor PDF</button>
+      <div class="settings-menu">
+        <button class="button secondary" id="settings-button" type="button" aria-expanded="false" aria-controls="settings-panel" data-i18n="action.settings">Setelan</button>
+        <div class="settings-panel" id="settings-panel" hidden>
+          <label class="settings-row" for="language-select"><span data-i18n="settings.appLanguage">Bahasa aplikasi</span><select id="language-select"><option value="id" data-i18n="language.id">Indonesia</option><option value="en" data-i18n="language.en">English</option></select></label>
+          <label class="settings-row" for="document-locale"><span data-i18n="settings.documentLanguage">Bahasa dokumen</span><select id="document-locale"><option value="id" data-i18n="language.id">Indonesia</option><option value="en" data-i18n="language.en">English</option></select></label>
+          <label class="settings-row" for="theme-select"><span data-i18n="settings.theme">Tema</span><select id="theme-select"><option value="system" data-i18n="theme.system">Sistem</option><option value="light" data-i18n="theme.light">Terang</option><option value="dark" data-i18n="theme.dark">Gelap</option></select></label>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-view-tabs" data-i18n-aria="view.nav" aria-label="Tampilan aplikasi">
+    <button class="active" type="button" data-view="edit">Isi CV</button>
+    <button type="button" data-view="preview" data-i18n="view.preview">Preview</button>
+    <button type="button" data-view="check"><span data-i18n="view.check">Pemeriksaan</span> <span id="mobile-issue-count">0</span></button>
+  </nav>
+
+  <div class="notice app-notice" id="notice" role="status" aria-live="polite" hidden></div>
+
+  <main class="app-shell editor-shell">
+    <aside class="steps" data-i18n-aria="steps.aria" aria-label="Tahapan pembuatan CV">
+      <div class="progress-block">
+        <div><span data-i18n="steps.completeness">Kelengkapan</span><strong id="completion-value">0%</strong></div>
+        <div class="progress-track" aria-hidden="true"><span id="completion-bar"></span></div>
+        <small id="completion-copy" data-i18n="steps.startHint">Mulai dari data diri</small>
+      </div>
+      <ol id="step-list"></ol>
+      <div class="letter-guide" id="letter-guide">
+        <span data-i18n="letterGuide.title">Urutan surat</span>
+        <ol>
+          <li data-i18n="letterGuide.step1">Penerima, kota, dan tanggal</li>
+          <li data-i18n="letterGuide.step2">Sapaan</li>
+          <li data-i18n="letterGuide.step3">Alasan melamar</li>
+          <li data-i18n="letterGuide.step4">Bukti pengalaman dengan angka</li>
+          <li data-i18n="letterGuide.step5">Penutup dan nama</li>
+        </ol>
+        <p data-i18n="letterGuide.note">Nama, posisi, dan perusahaan diambil otomatis dari CV serta panel Sesuai lowongan.</p>
+      </div>
+      <p class="local-note"><strong data-i18n="privacy.title">Privat secara default</strong><br><span data-i18n="privacy.body">Data tersimpan di browser ini dan tidak dikirim ke server.</span></p>
+      <div class="data-actions">
+        <label class="sample-row" for="sample-locale"><span data-i18n="action.sampleLanguage">Bahasa contoh</span><select id="sample-locale"><option value="id" data-i18n="language.id">Indonesia</option><option value="en" data-i18n="language.en">English</option></select></label>
+        <button class="button secondary" id="sample-button" type="button" data-i18n="action.sample">Isi contoh</button>
+        <button class="button danger" id="clear-button" type="button" data-i18n="action.clear">Kosongkan</button>
+      </div>
+    </aside>
+
+    <section class="workspace editor-workspace" data-i18n-aria="workspace.cv" aria-label="Editor CV">
+      <div class="mobile-step-picker">
+        <label for="mobile-step-select">Bagian CV</label>
+        <select id="mobile-step-select"></select>
+      </div>
+      <div id="editor-root"></div>
+    </section>
+
+    <aside class="preview-panel" data-i18n-aria="panel.cv" aria-label="Preview dan pemeriksaan CV">
+      <div class="preview-toolbar">
+        <div class="preview-tabs" role="tablist" data-i18n-aria="panel.mode" aria-label="Mode panel kanan">
+          <button class="active" id="preview-tab" type="button" role="tab" aria-selected="true" data-preview-mode="preview" data-i18n="view.preview">Preview</button>
+          <button id="check-tab" type="button" role="tab" aria-selected="false" data-preview-mode="check"><span data-i18n="view.check">Pemeriksaan</span> <span id="issue-count">0</span></button>
+        </div>
+        <span id="preview-scale-label">A4</span>
+      </div>
+      <div class="preview-view" id="preview-view" role="tabpanel" aria-labelledby="preview-tab">
+        <div class="preview-stage" id="preview-stage">
+          <div id="preview-holder"><div id="preview-root"></div></div>
+        </div>
+      </div>
+      <div class="check-view" id="check-view" role="tabpanel" aria-labelledby="check-tab" hidden>
+        <div id="check-root"></div>
+      </div>
+    </aside>
+  </main>
+
+  <a class="support-link" href="https://saweria.co/budimanr3101" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-i18n-aria="support.aria" aria-label="Thanks to me melalui Saweria, terbuka di tab baru">
+    <span class="support-copy"><strong>Thanks to me</strong><small data-i18n="support.via">via Saweria</small></span>
+    <span class="support-coin" aria-hidden="true">Rp</span>
+  </a>
+
+  <div class="print-root" id="print-root" aria-hidden="true"></div>
+  <noscript data-i18n="noscript">Aplikasi membutuhkan JavaScript untuk mengedit dan menyimpan CV secara lokal.</noscript>
+  <script type="module" src="./js/editor-main.js"></script>
+</body>
+</html>

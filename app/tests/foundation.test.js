@@ -130,7 +130,7 @@ test("invalid replacement is rejected before active data changes", () => {
 });
 
 test("browser shell exposes essential controls without JSON backup or network client", async () => {
-  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const html = await readFile(new URL("../editor.html", import.meta.url), "utf8");
   const main = await readFile(new URL("../js/editor-main.js", import.meta.url), "utf8");
   for (const id of ["sample-button", "clear-button", "pdf-button", "theme-select", "save-state"]) {
     assert.match(html, new RegExp(`id=["']${id}["']`));
@@ -141,7 +141,7 @@ test("browser shell exposes essential controls without JSON backup or network cl
 
 
 test("support link opens the configured Saweria page without a referrer", async () => {
-  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const html = await readFile(new URL("../editor.html", import.meta.url), "utf8");
   assert.match(html, /href="https:\/\/saweria\.co\/budimanr3101"/);
   assert.match(html, /target="_blank"/);
   assert.match(html, /rel="noopener noreferrer"/);
@@ -150,15 +150,18 @@ test("support link opens the configured Saweria page without a referrer", async 
 });
 
 
-test("production shell uses the SiapLamar brand and approved Dokumen Siap icon", async () => {
-  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
-  const icon = await readFile(new URL("../assets/siaplamar-icon.svg", import.meta.url), "utf8");
-  assert.match(html, /<title>SiapLamar — CV ATS Generator<\/title>/);
-  assert.match(html, /rel="icon"[^>]+href="\.\/assets\/siaplamar-icon\.svg"/);
-  assert.match(html, /class="brand-mark"[^>]+src="\.\/assets\/siaplamar-icon\.svg"/);
-  assert.match(html, /<strong>SiapLamar<\/strong>/);
-  assert.doesNotMatch(html, /RapiCV/);
-  assert.match(icon, /<title id="title">SiapLamar — Dokumen Siap<\/title>/);
-  assert.match(icon, /id="document"/);
+test("production shell uses the JagoanCV brand and approved Powder Blue + Mint icon", async () => {
+  const html = await readFile(new URL("../editor.html", import.meta.url), "utf8");
+  const icon = await readFile(new URL("../assets/jagoancv-icon.svg", import.meta.url), "utf8");
+  assert.match(html, /<title>JagoanCV — CV ATS Generator<\/title>/);
+  assert.match(html, /rel="icon"[^>]+href="\.\/assets\/jagoancv-icon\.svg"/);
+  assert.match(html, /class="brand-mark"[^>]+src="\.\/assets\/jagoancv-icon\.svg"/);
+  assert.match(html, /<strong>JagoanCV<\/strong>/);
+  assert.doesNotMatch(html, /RapiCV|SiapLamar/);
+  assert.match(icon, /<title id="title">JagoanCV<\/title>/);
+  assert.match(icon, /id="letter-j"/);
   assert.match(icon, /id="forward-check"/);
+  assert.match(icon, /fill="#CFE9F1"/);
+  assert.match(icon, /fill="#244752"/);
+  assert.match(icon, /fill="#397563"/);
 });

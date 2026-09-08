@@ -1,0 +1,113 @@
+<!-- BRIEF: JagoanCV social preview, 1200x630, approved Powder Blue + Mint palette, airy professional layout, JagoanCV monogram, fictional Nadia Pratama CV preview, transparent readiness example, and factual local-first messaging. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">JagoanCV social preview</title>
+  <desc id="desc">JagoanCV branding with a fictional CV preview, transparent readiness example, and local-first product highlights.</desc>
+  <defs>
+    <linearGradient id="page-wash" x1="40" y1="24" x2="1160" y2="606" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FCFE"/>
+      <stop offset="1" stop-color="#EDF8FB"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#244752" flood-opacity=".14"/>
+    </filter>
+    <clipPath id="app-clip"><rect x="688" y="58" width="442" height="514" rx="30"/></clipPath>
+  </defs>
+
+  <g id="background">
+    <rect width="1200" height="630" fill="#F3FAFD"/>
+    <circle cx="1090" cy="32" r="250" fill="#EEEAF8" opacity=".82"/>
+    <circle cx="76" cy="598" r="230" fill="#DDF3E8" opacity=".82"/>
+    <circle cx="570" cy="34" r="145" fill="#CFE9F1" opacity=".36"/>
+    <g stroke="#D7E6EB" stroke-width="1" opacity=".52">
+      <path d="M0 105H1200M0 210H1200M0 315H1200M0 420H1200M0 525H1200"/>
+      <path d="M120 0V630M240 0V630M360 0V630M480 0V630M600 0V630M720 0V630M840 0V630M960 0V630M1080 0V630"/>
+    </g>
+  </g>
+
+  <g id="brand-lockup" transform="translate(72 58)">
+    <g id="brand-icon" transform="scale(.48)">
+      <rect x="16" y="16" width="224" height="224" rx="54" fill="#CFE9F1"/>
+      <path d="M190 16h-31l81 81V70c0-30-24-54-50-54Z" fill="#B8DCE7"/>
+      <path d="M105 55h89v83c0 52-30 81-79 81-39 0-66-21-73-57l43-12c4 19 14 29 31 29 21 0 33-14 33-42V98h-44Z" fill="#244752"/>
+      <path d="M39 148 80 190 145 121 165 140 81 224 20 166Z" fill="#397563"/>
+      <path d="m145 121 48-3-5 47-18-18 18-18-26 3Z" fill="#397563"/>
+      <rect x="194" y="183" width="25" height="25" rx="8" fill="#C86F55"/>
+    </g>
+    <text x="138" y="51" fill="#244752" font-family="Arial, sans-serif" font-size="48" font-weight="800">JagoanCV</text>
+    <text x="140" y="84" fill="#58717A" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2.8">CV ATS GENERATOR</text>
+  </g>
+
+  <g id="message" font-family="Arial, sans-serif">
+    <text x="72" y="225" fill="#28444F" font-size="54" font-weight="800">Tulis dengan arah.</text>
+    <text x="72" y="291" fill="#315D6B" font-size="38" font-weight="800">Periksa sebelum dikirim.</text>
+    <text x="74" y="343" fill="#58717A" font-size="22">CV + surat lamaran · gratis · local-first</text>
+  </g>
+
+  <g id="feature-pills" transform="translate(72 411)" font-family="Arial, sans-serif" font-size="15" font-weight="700">
+    <g><rect width="122" height="42" rx="21" fill="#FFFFFF" stroke="#BEDCE6"/><text x="61" y="27" text-anchor="middle" fill="#315D6B">PREVIEW A4</text></g>
+    <g transform="translate(134)"><rect width="196" height="42" rx="21" fill="#DDF3E8" stroke="#BDE4D3"/><text x="98" y="27" text-anchor="middle" fill="#397563">CEK TRANSPARAN</text></g>
+    <g transform="translate(342)"><rect width="178" height="42" rx="21" fill="#EEEAF8" stroke="#D8D2EB"/><text x="89" y="27" text-anchor="middle" fill="#625F89">PDF BERBASIS TEKS</text></g>
+  </g>
+
+  <g id="privacy-note" transform="translate(72 493)" font-family="Arial, sans-serif">
+    <rect width="518" height="66" rx="18" fill="#FFFFFF" stroke="#D7E6EB"/>
+    <circle cx="33" cy="33" r="13" fill="#DDF3E8"/>
+    <path d="m27 33 4 4 8-9" fill="none" stroke="#397563" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="58" y="29" fill="#28444F" font-size="16" font-weight="700">Data CV tetap di browser</text>
+    <text x="58" y="49" fill="#58717A" font-size="13">Tanpa akun · Indonesia / English</text>
+  </g>
+
+  <g id="product-visual" filter="url(#soft-shadow)">
+    <rect x="688" y="58" width="442" height="514" rx="30" fill="#FFFFFF" stroke="#C6DDE5" stroke-width="2"/>
+    <g clip-path="url(#app-clip)">
+      <rect x="688" y="58" width="442" height="62" fill="#F7FBFC"/>
+      <circle cx="718" cy="89" r="6" fill="#EE9A7A"/><circle cx="738" cy="89" r="6" fill="#E8C36E"/><circle cx="758" cy="89" r="6" fill="#7FC5A9"/>
+      <rect x="820" y="75" width="176" height="28" rx="14" fill="#EAF4F7"/>
+      <text x="908" y="94" text-anchor="middle" fill="#315D6B" font-family="Arial, sans-serif" font-size="12" font-weight="700">JagoanCV · CV</text>
+
+      <rect x="710" y="140" width="256" height="392" rx="14" fill="#FFFFFF" stroke="#D7E6EB"/>
+      <text x="734" y="177" fill="#244752" font-family="Arial, sans-serif" font-size="21" font-weight="800">Nadia Pratama</text>
+      <text x="734" y="199" fill="#58717A" font-family="Arial, sans-serif" font-size="12" font-weight="700">Cloud Engineer</text>
+      <rect x="734" y="216" width="208" height="2" rx="1" fill="#D7E6EB"/>
+      <text x="734" y="245" fill="#315D6B" font-family="Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="1.1">RINGKASAN</text>
+      <rect x="734" y="258" width="204" height="6" rx="3" fill="#C5D7DD"/>
+      <rect x="734" y="272" width="183" height="6" rx="3" fill="#C5D7DD"/>
+      <rect x="734" y="286" width="196" height="6" rx="3" fill="#C5D7DD"/>
+      <text x="734" y="325" fill="#315D6B" font-family="Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="1.1">PENGALAMAN</text>
+      <rect x="734" y="338" width="148" height="7" rx="3.5" fill="#6B8791"/>
+      <circle cx="739" cy="365" r="4" fill="#397563"/><rect x="752" y="362" width="185" height="6" rx="3" fill="#C5D7DD"/>
+      <circle cx="739" cy="383" r="4" fill="#397563"/><rect x="752" y="380" width="165" height="6" rx="3" fill="#C5D7DD"/>
+      <circle cx="739" cy="401" r="4" fill="#397563"/><rect x="752" y="398" width="178" height="6" rx="3" fill="#C5D7DD"/>
+      <text x="734" y="441" fill="#315D6B" font-family="Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="1.1">KETERAMPILAN</text>
+      <rect x="734" y="454" width="62" height="22" rx="11" fill="#E8F4F8"/><rect x="804" y="454" width="72" height="22" rx="11" fill="#DDF3E8"/><rect x="884" y="454" width="58" height="22" rx="11" fill="#EEEAF8"/>
+
+      <g id="readiness-card" transform="translate(986 140)" font-family="Arial, sans-serif">
+        <rect width="122" height="176" rx="18" fill="#CFE9F1"/>
+        <text x="15" y="27" fill="#315D6B" font-size="10" font-weight="800" letter-spacing=".7">CONTOH KESIAPAN</text>
+        <text x="15" y="78" fill="#244752" font-size="44" font-weight="800">84</text>
+        <text x="73" y="77" fill="#58717A" font-size="14" font-weight="700">/100</text>
+        <rect x="15" y="96" width="92" height="8" rx="4" fill="#AFCFD9"/><rect x="15" y="96" width="77" height="8" rx="4" fill="#315D6B"/>
+        <text x="15" y="128" fill="#315D6B" font-size="11" font-weight="700">Panduan transparan</text>
+        <text x="15" y="148" fill="#58717A" font-size="9">bukan skor vendor</text>
+      </g>
+
+      <g id="keyword-card" transform="translate(986 334)" font-family="Arial, sans-serif">
+        <rect width="122" height="104" rx="18" fill="#DDF3E8"/>
+        <text x="15" y="27" fill="#397563" font-size="10" font-weight="800" letter-spacing=".7">KEYWORD</text>
+        <text x="15" y="64" fill="#28594B" font-size="29" font-weight="800">7 / 9</text>
+        <text x="15" y="84" fill="#58796E" font-size="9">dihitung terpisah</text>
+      </g>
+
+      <g id="local-badge" transform="translate(986 455)" font-family="Arial, sans-serif">
+        <rect width="122" height="54" rx="18" fill="#EEEAF8"/>
+        <circle cx="20" cy="27" r="7" fill="#397563"/>
+        <text x="34" y="25" fill="#49466D" font-size="10" font-weight="700">Tersimpan</text>
+        <text x="34" y="39" fill="#6A6788" font-size="9">secara lokal</text>
+      </g>
+    </g>
+  </g>
+
+  <rect x="72" y="588" width="1056" height="4" rx="2" fill="#315D6B"/>
+  <rect x="544" y="588" width="190" height="4" rx="2" fill="#397563"/>
+  <rect x="734" y="588" width="92" height="4" rx="2" fill="#C86F55"/>
+</svg>

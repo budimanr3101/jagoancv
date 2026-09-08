@@ -3,104 +3,158 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="SiapLamar adalah generator CV local-first dengan struktur yang ramah ATS.">
-  <title>SiapLamar — CV ATS Generator</title>
-  <link rel="icon" type="image/svg+xml" href="./assets/siaplamar-icon.svg">
+  <title>JagoanCV — Generator CV ATS & Surat Lamaran Gratis</title>
+  <meta name="description" content="Buat CV ATS dan surat lamaran gratis langsung dari browser dengan preview A4, pemeriksaan transparan, dan data yang tetap tersimpan lokal.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="application-name" content="JagoanCV">
+  <meta name="google-site-verification" content="SnXxogW2MZ6DcnUaJePP5FwgCYcGh8hF1FG7u0M5Lj4">
+  <meta name="theme-color" content="#f3fafd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#13242b" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://jagoancv.pages.dev/">
+  <link rel="alternate" hreflang="id" href="https://jagoancv.pages.dev/">
+  <link rel="alternate" hreflang="en" href="https://jagoancv.pages.dev/en/">
+  <link rel="alternate" hreflang="x-default" href="https://jagoancv.pages.dev/">
+  <link rel="icon" type="image/svg+xml" href="./assets/jagoancv-icon.svg">
+  <link rel="manifest" href="./manifest.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JagoanCV">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="JagoanCV — Generator CV ATS & Surat Lamaran Gratis">
+  <meta property="og:description" content="Buat CV dan surat lamaran, periksa kesiapan ATS secara transparan, lalu ekspor PDF—gratis dan local-first.">
+  <meta property="og:url" content="https://jagoancv.pages.dev/">
+  <meta property="og:image" content="https://jagoancv.pages.dev/assets/jagoancv-social.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="JagoanCV — CV, surat lamaran, pemeriksaan ATS transparan, dan ekspor PDF">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JagoanCV — Generator CV ATS & Surat Lamaran Gratis">
+  <meta name="twitter:description" content="Buat CV dan surat lamaran, periksa kesiapan ATS secara transparan, lalu ekspor PDF—gratis dan local-first.">
+  <meta name="twitter:image" content="https://jagoancv.pages.dev/assets/jagoancv-social.png">
+  <meta name="twitter:image:alt" content="JagoanCV — CV, surat lamaran, pemeriksaan ATS transparan, dan ekspor PDF">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://jagoancv.pages.dev/#website",
+        "url": "https://jagoancv.pages.dev/",
+        "name": "JagoanCV",
+        "alternateName": ["Generator CV ATS JagoanCV", "JagoanCV ATS CV Generator"],
+        "description": "Generator CV dan surat lamaran gratis yang local-first, dwibahasa, dan dilengkapi pemeriksaan kesiapan ATS transparan serta ekspor PDF berbasis teks.",
+        "inLanguage": ["id-ID", "en"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://jagoancv.pages.dev/#software",
+        "name": "JagoanCV",
+        "url": "https://jagoancv.pages.dev/",
+        "image": "https://jagoancv.pages.dev/assets/jagoancv-social.png",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Generator CV dan surat lamaran",
+        "operatingSystem": "Semua sistem operasi dengan browser modern",
+        "browserRequirements": "Memerlukan browser modern dengan JavaScript aktif",
+        "isAccessibleForFree": true,
+        "inLanguage": ["id-ID", "en"],
+        "description": "Aplikasi web gratis untuk membuat CV dan surat lamaran, memeriksa kesiapan ATS secara transparan, dan mengekspor PDF dengan data yang tetap tersimpan lokal di browser.",
+        "featureList": [
+          "Pembuatan CV terpandu",
+          "Pembuatan surat lamaran",
+          "Pemeriksaan kesiapan ATS transparan yang bukan skor resmi vendor",
+          "Keyword coverage yang dihitung terpisah",
+          "Ekspor PDF berbasis teks",
+          "Penyimpanan local-first di browser",
+          "Antarmuka dan dokumen Bahasa Indonesia dan English",
+          "Workspace responsif untuk HP dan desktop"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "IDR"
+        }
+      }
+    ]
+  }
+  </script>
   <script>try{const theme=localStorage.getItem("cv-ats-generator:theme");if(theme==="light"||theme==="dark")document.documentElement.dataset.theme=theme}catch{}</script>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./landing.css">
+  <script src="./landing.js" defer></script>
 </head>
-<body data-mobile-view="edit" data-doc-mode="cv">
-  <header class="app-header">
-    <a class="brand" href="./" data-i18n-aria="brand.home" aria-label="SiapLamar beranda"><img class="brand-mark" src="./assets/siaplamar-icon.svg" alt="" width="38" height="38" aria-hidden="true"><span class="brand-copy"><strong>SiapLamar</strong><small data-i18n="brand.tagline">CV ATS Generator</small></span></a>
-    <div class="doc-switch" role="group" data-i18n-aria="doc.group" aria-label="Dokumen aktif">
-      <button class="active" type="button" data-doc-mode="cv" aria-pressed="true" data-i18n="doc.cv">CV</button>
-      <button type="button" data-doc-mode="cover-letter" aria-pressed="false" data-i18n="doc.letter">Surat Lamaran</button>
-    </div>
-    <div class="save-state" id="save-state" role="status" aria-live="polite">
-      <span class="save-dot" aria-hidden="true"></span><span id="save-message">Memuat data lokal…</span>
-    </div>
-    <div class="header-actions">
-      <button class="button" id="pdf-button" type="button" data-i18n="action.exportPdf">Ekspor PDF</button>
-      <div class="settings-menu">
-        <button class="button secondary" id="settings-button" type="button" aria-expanded="false" aria-controls="settings-panel" data-i18n="action.settings">Setelan</button>
-        <div class="settings-panel" id="settings-panel" hidden>
-          <label class="settings-row" for="language-select"><span data-i18n="settings.appLanguage">Bahasa aplikasi</span><select id="language-select"><option value="id" data-i18n="language.id">Indonesia</option><option value="en" data-i18n="language.en">English</option></select></label>
-          <label class="settings-row" for="document-locale"><span data-i18n="settings.documentLanguage">Bahasa dokumen</span><select id="document-locale"><option value="id" data-i18n="language.id">Indonesia</option><option value="en" data-i18n="language.en">English</option></select></label>
-          <label class="settings-row" for="theme-select"><span data-i18n="settings.theme">Tema</span><select id="theme-select"><option value="system" data-i18n="theme.system">Sistem</option><option value="light" data-i18n="theme.light">Terang</option><option value="dark" data-i18n="theme.dark">Gelap</option></select></label>
-        </div>
+<body>
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Navigasi utama">
+      <a class="brand" href="#top" aria-label="JagoanCV, kembali ke awal">
+        <svg class="brand-mark" viewBox="0 0 256 256" aria-hidden="true"><defs><linearGradient id="logo-bg" x1="32" y1="24" x2="220" y2="232" gradientUnits="userSpaceOnUse"><stop stop-color="#2468AD"/><stop offset="1" stop-color="#123E72"/></linearGradient><linearGradient id="logo-check" x1="72" y1="158" x2="202" y2="104" gradientUnits="userSpaceOnUse"><stop stop-color="#78D1AD"/><stop offset="1" stop-color="#35A37A"/></linearGradient></defs><rect x="16" y="16" width="224" height="224" rx="54" fill="url(#logo-bg)"/><path d="M66 50h82l42 42v112a12 12 0 0 1-12 12H66a12 12 0 0 1-12-12V62a12 12 0 0 1 12-12Z" fill="#F8FBFF"/><path d="M148 50v32a10 10 0 0 0 10 10h32Z" fill="#CFE4F7"/><path d="M78 92h46M78 116h76M78 140h54" stroke="#8BA6BE" stroke-width="10" stroke-linecap="round"/><path d="m77 166 28 27 70-75" fill="none" stroke="#15314D" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" opacity=".2" transform="translate(0 7)"/><path d="m77 166 28 27 70-75" fill="none" stroke="url(#logo-check)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="brand-copy"><strong>JagoanCV</strong><small>CV ATS Generator</small></span>
+      </a>
+      <div class="nav-links"><a href="#fitur">Fitur</a><a href="#cara-kerja">Cara kerja</a><a href="#mobile">Di HP</a><a href="#privasi">Privasi</a><a href="#faq">FAQ</a></div>
+      <div class="nav-controls">
+        <a class="theme-toggle language-link" href="./en/" lang="en" hreflang="en" aria-label="Read this page in English"><span>EN</span></a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Tema: Sistem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg><span id="theme-label">Sistem</span></button>
+        <a class="button" href="./editor.html">Buka editor</a>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <nav class="mobile-view-tabs" data-i18n-aria="view.nav" aria-label="Tampilan aplikasi">
-    <button class="active" type="button" data-view="edit">Isi CV</button>
-    <button type="button" data-view="preview" data-i18n="view.preview">Preview</button>
-    <button type="button" data-view="check"><span data-i18n="view.check">Pemeriksaan</span> <span id="mobile-issue-count">0</span></button>
-  </nav>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <a class="mobile-hero-brand brand" href="#top" aria-label="JagoanCV, kembali ke awal"><svg class="brand-mark" viewBox="0 0 256 256" aria-hidden="true"><rect x="16" y="16" width="224" height="224" rx="54" fill="#2468AD"/><path d="M66 50h82l42 42v112a12 12 0 0 1-12 12H66a12 12 0 0 1-12-12V62a12 12 0 0 1 12-12Z" fill="#F8FBFF"/><path d="M148 50v32a10 10 0 0 0 10 10h32Z" fill="#CFE4F7"/><path d="M78 92h46M78 116h76M78 140h54" stroke="#8BA6BE" stroke-width="10" stroke-linecap="round"/><path d="m77 166 28 27 70-75" fill="none" stroke="#35A37A" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-copy"><strong>JagoanCV</strong><small>CV ATS Generator</small></span></a>
+          <span class="eyebrow">CV & surat lamaran · di HP maupun desktop</span>
+          <h1>Buat lamaran yang rapi. <span class="typing-text" data-typing><span class="typing-measure" data-typing-measure aria-hidden="true">Periksa sebelum dikirim.</span><span class="typing-live" data-typing-live aria-hidden="true">Periksa sebelum dikirim.</span><span class="typing-accessible">Periksa sebelum dikirim.</span></span></h1>
+          <p class="hero-lead">Susun CV dan surat lamaran gratis langsung dari browser, lihat preview A4, periksa kesiapan ATS secara transparan, lalu ekspor PDF berbasis teks—tanpa akun dan tetap nyaman lewat HP.</p>
+          <ul class="hero-proof" aria-label="Keunggulan JagoanCV"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Responsif di HP</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Tanpa instalasi</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Tersimpan otomatis</li></ul>
+          <div class="hero-actions"><a class="button" href="./editor.html">Mulai buat CV <span aria-hidden="true">→</span></a><a class="button secondary" href="#cara-kerja">Lihat cara kerjanya</a></div>
+          <div class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3"/><rect x="4" y="10" width="16" height="11" rx="3"/><path d="m9.5 15 1.8 1.8 3.7-3.7"/></svg><span>Data CV dan deskripsi lowongan tetap di perangkatmu.</span></div>
+        </div>
 
-  <div class="notice app-notice" id="notice" role="status" aria-live="polite" hidden></div>
-
-  <main class="app-shell editor-shell">
-    <aside class="steps" data-i18n-aria="steps.aria" aria-label="Tahapan pembuatan CV">
-      <div class="progress-block">
-        <div><span data-i18n="steps.completeness">Kelengkapan</span><strong id="completion-value">0%</strong></div>
-        <div class="progress-track" aria-hidden="true"><span id="completion-bar"></span></div>
-        <small id="completion-copy" data-i18n="steps.startHint">Mulai dari data diri</small>
+        <div class="product-stage" role="img" aria-label="Ilustrasi antarmuka JagoanCV: editor CV, preview A4, dan contoh hasil pemeriksaan">
+          <div class="product-window"><div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="mini-brand"><span class="doc-icon" aria-hidden="true">✓</span> JagoanCV</span><span class="mini-switch"><span class="active">CV</span><span>Surat Lamaran</span></span><span class="local-status"><i></i> Tersimpan lokal</span></div>
+            <div class="product-body"><div class="mini-steps" aria-hidden="true"><div class="mini-progress"><i></i></div><div class="mini-step"><b>✓</b> Data diri</div><div class="mini-step"><b>✓</b> Ringkasan</div><div class="mini-step active"><b>3</b> Pengalaman</div><div class="mini-step"><b>4</b> Pendidikan</div><div class="mini-step"><b>5</b> Keterampilan</div><div class="mini-step"><b>6</b> Tambahan</div></div>
+              <div class="mini-editor" aria-hidden="true"><span class="mini-kicker">Langkah 3 dari 6</span><div class="demo-title">Pengalaman</div><p>Tunjukkan dampak pekerjaan dengan contoh yang terukur.</p><div class="field-row"><div class="fake-field"><label>Posisi</label><div class="fake-input">Cloud Engineer</div></div><div class="fake-field"><label>Perusahaan</label><div class="fake-input">Nusantara Cloud</div></div></div><div class="fake-field"><label>Pencapaian utama</label><div class="fake-input tall">Mengotomasi deployment infrastruktur dan memangkas waktu provisioning sebesar 60%.</div></div><div class="tip"><strong>Bullet kuat:</strong> aksi + konteks + ukuran hasil.</div></div>
+              <div class="mini-preview" aria-hidden="true"><article class="paper"><div class="demo-name">Nadia Pratama</div><div class="role">Cloud Engineer</div><div class="contact">Jakarta · nadia.pratama@example.com · linkedin.com/in/nadia-pratama</div><div class="demo-section">Ringkasan</div><p>Cloud Engineer berfokus pada otomatisasi infrastruktur, reliability, dan efisiensi operasional.</p><div class="demo-section">Pengalaman</div><p><strong>Cloud Engineer · Nusantara Cloud</strong></p><ul><li>Mengotomasi deployment dan memangkas waktu provisioning 60%.</li><li>Meningkatkan observability untuk workload produksi.</li></ul><div class="demo-section">Keterampilan</div><p>AWS · Terraform · Kubernetes · CI/CD</p></article></div></div>
+          </div>
+          <aside class="score-card" aria-label="Contoh hasil pemeriksaan CV"><div class="score-top"><div><small>Contoh kesiapan CV</small><div class="score-value">84<span>/100</span></div></div><small>Baik</small></div><div class="score-bar" aria-hidden="true"><i></i></div><div class="keyword-line"><span>Keyword coverage</span><strong>7 dari 9</strong></div><small class="score-disclaimer">Terpisah dari skor · bukan skor resmi vendor ATS</small></aside>
+        </div>
       </div>
-      <ol id="step-list"></ol>
-      <div class="letter-guide" id="letter-guide">
-        <span data-i18n="letterGuide.title">Urutan surat</span>
-        <ol>
-          <li data-i18n="letterGuide.step1">Penerima, kota, dan tanggal</li>
-          <li data-i18n="letterGuide.step2">Sapaan</li>
-          <li data-i18n="letterGuide.step3">Alasan melamar</li>
-          <li data-i18n="letterGuide.step4">Bukti pengalaman dengan angka</li>
-          <li data-i18n="letterGuide.step5">Penutup dan nama</li>
-        </ol>
-        <p data-i18n="letterGuide.note">Nama, posisi, dan perusahaan diambil otomatis dari CV serta panel Sesuai lowongan.</p>
-      </div>
-      <p class="local-note"><strong data-i18n="privacy.title">Privat secara default</strong><br><span data-i18n="privacy.body">Data tersimpan di browser ini dan tidak dikirim ke server.</span></p>
-      <div class="data-actions">
-        <label class="sample-row" for="sample-locale"><span data-i18n="action.sampleLanguage">Bahasa contoh</span><select id="sample-locale"><option value="id" data-i18n="language.id">Indonesia</option><option value="en" data-i18n="language.en">English</option></select></label>
-        <button class="button secondary" id="sample-button" type="button" data-i18n="action.sample">Isi contoh</button>
-        <button class="button danger" id="clear-button" type="button" data-i18n="action.clear">Kosongkan</button>
-      </div>
-    </aside>
-
-    <section class="workspace editor-workspace" data-i18n-aria="workspace.cv" aria-label="Editor CV">
-      <div class="mobile-step-picker">
-        <label for="mobile-step-select">Bagian CV</label>
-        <select id="mobile-step-select"></select>
-      </div>
-      <div id="editor-root"></div>
     </section>
 
-    <aside class="preview-panel" data-i18n-aria="panel.cv" aria-label="Preview dan pemeriksaan CV">
-      <div class="preview-toolbar">
-        <div class="preview-tabs" role="tablist" data-i18n-aria="panel.mode" aria-label="Mode panel kanan">
-          <button class="active" id="preview-tab" type="button" role="tab" aria-selected="true" data-preview-mode="preview" data-i18n="view.preview">Preview</button>
-          <button id="check-tab" type="button" role="tab" aria-selected="false" data-preview-mode="check"><span data-i18n="view.check">Pemeriksaan</span> <span id="issue-count">0</span></button>
-        </div>
-        <span id="preview-scale-label">A4</span>
-      </div>
-      <div class="preview-view" id="preview-view" role="tabpanel" aria-labelledby="preview-tab">
-        <div class="preview-stage" id="preview-stage">
-          <div id="preview-holder"><div id="preview-root"></div></div>
-        </div>
-      </div>
-      <div class="check-view" id="check-view" role="tabpanel" aria-labelledby="check-tab" hidden>
-        <div id="check-root"></div>
-      </div>
-    </aside>
+    <div class="trust-strip" aria-label="Keunggulan utama"><div class="container trust-grid">
+      <div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>Tanpa akun</div><div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 5h4M11 18h2"/></svg></span>Nyaman lewat HP</div><div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 22h8M12 19v3"/></svg></span>Data tetap lokal</div><div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2h9l4 4v16H6z"/><path d="M14 2v5h5M9 12h6M9 16h6"/></svg></span>PDF berbasis teks</div><div class="trust-item"><span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>Indonesia & English</div>
+    </div></div>
+
+    <section id="fitur"><div class="container"><header class="section-heading"><span class="section-kicker">Fitur utama</span><h2>Bukan sekadar formulir CV.</h2><p>JagoanCV membantu kamu menulis, melihat hasilnya, dan menemukan hal yang masih perlu diperbaiki sebelum mengirim lamaran.</p></header><div class="feature-grid">
+      <article class="feature-card large"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h5M8 16h7"/></svg></span><h3>Tulis dengan arah, bukan dari layar kosong.</h3><p>Enam langkah terpandu menjaga struktur tetap runtut. Panduan bullet membantu mengubah tanggung jawab menjadi pencapaian yang jelas dan terukur.</p><div class="steps-demo" aria-hidden="true"><div class="steps-list"><div><b>1</b> Data diri</div><div><b>2</b> Ringkasan</div><div class="selected"><b>3</b> Pengalaman</div><div><b>4</b> Pendidikan</div></div><div class="bullet-demo"><small>Pencapaian utama</small><p>Mengotomasi deployment infrastruktur dan memangkas waktu provisioning sebesar 60%.</p><div class="signal-row"><span>Aksi</span><span>Konteks</span><span>Angka</span></div></div></div></article>
+      <article class="feature-card medium"><span class="feature-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><h3>Pemeriksaan yang bisa dijelaskan.</h3><p>Skor kesiapan menunjukkan struktur, kelengkapan, kualitas konten, dan konsistensi. Keyword coverage tetap terpisah agar angka tidak menyesatkan.</p><div class="check-demo" aria-hidden="true"><div class="score-ring"></div><div class="check-breakdown"><div><span>Struktur</span><strong>31/35</strong><i></i></div><div><span>Kelengkapan</span><strong>21/25</strong><i></i></div><div><span>Konten</span><strong>20/25</strong><i></i></div></div></div><div class="separate-note"><span>Keyword coverage</span><strong>Dihitung terpisah</strong></div></article>
+      <article class="feature-card responsive-feature"><div class="responsive-feature-copy"><span class="feature-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="13" height="10" rx="1.5"/><path d="M7 18h5M9.5 14v4"/><rect x="17" y="8" width="4" height="10" rx="1"/></svg></span><h3>Nyaman dipakai lewat HP maupun desktop.</h3><p>Layout responsif mengubah workspace tiga panel menjadi tiga tampilan fokus di layar kecil. Isi CV, buka preview A4, dan lihat hasil pemeriksaan langsung dari browser HP—tanpa aplikasi tambahan.</p><a class="feature-link" href="#mobile">Lihat pengalaman di HP <span aria-hidden="true">→</span></a></div><div class="responsive-scene" aria-hidden="true"><span class="responsive-badge">Responsive web</span><div class="responsive-desktop"><div class="responsive-desktop-bar"><i></i><i></i><i></i><strong>JagoanCV</strong></div><div class="responsive-desktop-body"><div class="responsive-desktop-side"><i></i><i></i><i></i><i></i></div><div class="responsive-desktop-form"><b>Pengalaman</b><i></i><i></i><i></i></div><div class="responsive-desktop-preview"><div class="responsive-desktop-paper"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div><div class="responsive-phone-mini"><div class="responsive-phone-screen"><div class="responsive-phone-head"></div><div class="responsive-phone-tabs"><i></i><i></i><i></i></div><div class="responsive-phone-field"></div><div class="responsive-phone-field"></div><div class="responsive-phone-field tall"></div><div class="responsive-phone-cta"></div></div></div></div></article>
+      <article class="feature-card half"><span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h10l4 4v14H5z"/><path d="M14 3v5h5M8 12h8M8 16h6"/></svg></span><h3>CV dan surat lamaran, satu alur.</h3><p>Pakai kembali nama, posisi, dan perusahaan tujuan. Berpindah dokumen tanpa keluar dari workspace yang sama.</p><div class="doc-switch-label" aria-hidden="true"><span>CV</span><span>Surat Lamaran</span></div><div class="docs-demo" aria-hidden="true"><div class="doc-sheet"><b>Curriculum Vitae</b><i></i><i></i><i></i><i></i><i></i></div><div class="doc-sheet"><b>Surat Lamaran</b><i></i><i></i><i></i><i></i><i></i></div></div></article>
+      <article class="feature-card half"><span class="feature-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 2h8l4 4v16H7z"/><path d="M14 2v5h5M4 7v12a2 2 0 0 0 2 2h1"/><path d="M10 12h6M10 16h6"/></svg></span><h3>Preview A4 yang sama dengan hasil akhir.</h3><p>Lihat dokumen satu kolom yang bersih, lalu ekspor PDF berbasis teks agar isi tetap dapat disalin dan dibaca sistem.</p><div class="pdf-demo" aria-hidden="true"><div class="pdf-row"><div class="pdf-file">PDF</div><div class="pdf-copy"><strong>nadia-pratama-cv.pdf</strong><span>Siap diunduh dari browser</span></div></div><div class="pdf-tags"><span>A4</span><span>Satu kolom</span><span>Teks asli</span><span>Bersih Sans</span></div></div></article>
+    </div></div></section>
+
+    <section class="how-section" id="cara-kerja"><div class="container"><header class="section-heading"><span class="section-kicker">Cara kerja</span><h2>Dari kosong sampai siap kirim dalam tiga langkah.</h2><p>Tidak perlu mempelajari template rumit atau menebak apa yang diperiksa.</p></header><div class="how-grid"><article class="how-step"><span class="step-number">01 · ISI</span><h3>Ceritakan pengalamanmu.</h3><p>Lengkapi enam bagian CV dengan panduan field, validasi, dan saran untuk bullet pengalaman.</p></article><article class="how-step"><span class="step-number">02 · PERIKSA</span><h3>Lihat yang masih kurang.</h3><p>Periksa kesiapan CV, detail setiap temuan, serta kecocokan keyword dengan lowongan yang kamu targetkan.</p></article><article class="how-step"><span class="step-number">03 · EKSPOR</span><h3>Unduh dan kirim.</h3><p>Pastikan preview A4 sudah tepat, kemudian ekspor CV atau surat lamaran sebagai PDF berbasis teks.</p></article></div></div></section>
+
+    <section class="mobile-section" id="mobile"><div class="container mobile-showcase"><div class="mobile-copy"><span class="section-kicker">Fleksibel di layar apa pun</span><h2>Isi CV dari HP. Tetap periksa sebelum kirim.</h2><p>JagoanCV menyesuaikan workspace menjadi tiga tampilan fokus—Isi CV, Preview, dan Pemeriksaan—agar alurnya tetap jelas saat digunakan lewat browser HP.</p><div class="mobile-benefits"><div class="mobile-benefit"><span class="mobile-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 5h4M11 18h2"/></svg></span><div><strong>Tampilan fokus untuk layar kecil</strong><span>Berpindah antara editor, preview, dan hasil pemeriksaan melalui tab yang jelas.</span></div></div><div class="mobile-benefit"><span class="mobile-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2h9l4 4v16H6z"/><path d="M14 2v5h5M9 12h6M9 16h6"/></svg></span><div><strong>Preview A4 tetap konsisten</strong><span>Kertas dokumen tetap putih dan menggunakan struktur satu kolom yang sama.</span></div></div><div class="mobile-benefit"><span class="mobile-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3"/><rect x="4" y="10" width="16" height="11" rx="3"/><path d="m9.5 15 1.8 1.8 3.7-3.7"/></svg></span><div><strong>Tetap local-first di HP</strong><span>CV dan deskripsi lowongan disimpan di browser pada perangkat yang sedang digunakan.</span></div></div></div><p class="device-local-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span>Karena belum ada sinkronisasi antarperangkat, dokumen yang dibuat di HP tersimpan pada browser HP tersebut.</span></p><div class="hero-actions"><a class="button" href="./editor.html">Buka editor dari perangkat ini <span aria-hidden="true">→</span></a></div></div>
+      <div class="mobile-visual"><span class="device-caption">Demo tampilan HP</span><div class="phone-device" role="group" aria-label="Demo interaktif JagoanCV di layar HP"><div class="phone-screen"><div class="phone-appbar"><span class="phone-logo" aria-hidden="true">✓</span><span class="phone-brand"><strong>JagoanCV</strong><small>CV ATS Generator</small></span><span class="phone-saved"><i></i>Tersimpan lokal</span></div><div class="phone-doc-switch" aria-label="Dokumen aktif"><span class="active">CV</span><span>Surat Lamaran</span></div><div class="phone-view-switch" role="group" aria-label="Pilih tampilan demo HP"><button type="button" data-phone-view="edit" aria-controls="phone-edit-panel" aria-pressed="true">Isi CV</button><button type="button" data-phone-view="preview" aria-controls="phone-preview-panel" aria-pressed="false">Preview</button><button type="button" data-phone-view="check" aria-controls="phone-check-panel" aria-pressed="false">Pemeriksaan</button></div><div class="phone-content">
+        <div class="phone-panel is-active" id="phone-edit-panel" data-phone-panel="edit" aria-hidden="false"><div class="phone-step-meta"><span>Langkah 3 dari 6</span><strong>68% lengkap</strong></div><div class="phone-progress" aria-hidden="true"><i></i></div><div class="demo-title">Pengalaman</div><p class="phone-intro">Tunjukkan dampak pekerjaan dengan contoh yang terukur.</p><div class="phone-field"><label>Posisi</label><div class="phone-input">Cloud Engineer</div></div><div class="phone-field"><label>Perusahaan</label><div class="phone-input">Nusantara Cloud</div></div><div class="phone-field"><label>Pencapaian utama</label><div class="phone-input tall">Mengotomasi deployment infrastruktur dan memangkas waktu provisioning sebesar 60%.</div></div><div class="phone-tip"><strong>Bullet kuat:</strong> aksi + konteks + ukuran hasil.</div><span class="phone-next" aria-hidden="true">Lanjut ke Pendidikan</span></div>
+        <div class="phone-panel" id="phone-preview-panel" data-phone-panel="preview" aria-hidden="true"><div class="phone-preview-stage"><article class="phone-paper"><div class="demo-name">Nadia Pratama</div><div class="phone-role">Cloud Engineer</div><div class="phone-contact">Jakarta · nadia.pratama@example.com · linkedin.com/in/nadia-pratama</div><div class="demo-section">Ringkasan</div><p>Cloud Engineer berfokus pada otomatisasi infrastruktur, reliability, dan efisiensi operasional.</p><div class="demo-section">Pengalaman</div><p><strong>Cloud Engineer · Nusantara Cloud</strong></p><ul><li>Mengotomasi deployment dan memangkas waktu provisioning 60%.</li><li>Meningkatkan observability untuk workload produksi.</li></ul><div class="demo-section">Keterampilan</div><p>AWS · Terraform · Kubernetes · CI/CD</p></article></div></div>
+        <div class="phone-panel" id="phone-check-panel" data-phone-panel="check" aria-hidden="true"><div class="phone-check-card"><span class="phone-check-kicker">Kesiapan CV</span><div class="phone-check-score"><strong>84</strong><span>/100 · Baik</span></div><p>Panduan transparan, bukan skor resmi vendor ATS.</p><div class="phone-check-breakdown"><div><span>Struktur</span><strong>31/35</strong></div><div><span>Kelengkapan</span><strong>21/25</strong></div><div><span>Konten</span><strong>20/25</strong></div><div><span>Konsistensi</span><strong>12/15</strong></div></div></div><div class="phone-keyword"><span>Keyword coverage</span><strong>7 dari 9</strong></div><div class="phone-finding"><i></i><div><strong>Struktur satu kolom</strong><span>Template mudah dibaca sebagai teks.</span></div></div><div class="phone-finding warning"><i></i><div><strong>Tambahkan satu hasil terukur</strong><span>Perkuat bullet pengalaman kedua.</span></div></div></div>
+      </div></div></div><aside class="mobile-status-card" aria-hidden="true"><small>Mode layar kecil</small><strong>3 tampilan</strong><span>Isi · Preview · Periksa</span></aside></div>
+    </div></section>
+
+    <section class="privacy-section" id="privasi"><div class="container privacy-panel"><div class="privacy-copy"><span class="section-kicker">Local-first</span><h2>CV kamu tidak perlu transit ke server kami.</h2><p>JagoanCV menyimpan dokumen di browser yang sedang kamu pakai. CV dan deskripsi lowongan tidak dikirim untuk diproses di tempat lain.</p><div class="privacy-points"><div class="privacy-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><div><strong>Tanpa akun</strong><span>Mulai menulis tanpa registrasi atau login.</span></div></div><div class="privacy-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><div><strong>Tersimpan otomatis di perangkat</strong><span>Perubahan disimpan ke penyimpanan lokal browser.</span></div></div><div class="privacy-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><div><strong>Kontrol tetap di tanganmu</strong><span>Kosongkan dokumen kapan pun dari aplikasi.</span></div></div></div></div><div class="privacy-diagram" role="img" aria-label="Data disimpan dari aplikasi ke penyimpanan lokal browser"><div class="diagram-card"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8h18M7 6h.01M10 6h.01"/></svg><strong>JagoanCV</strong><small>Kamu menulis di aplikasi</small></div></div><div class="diagram-line" aria-hidden="true"></div><div class="diagram-card"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7c0-2 3.6-4 8-4s8 2 8 4-3.6 4-8 4-8-2-8-4Z"/><path d="M4 7v5c0 2 3.6 4 8 4s8-2 8-4V7M4 12v5c0 2 3.6 4 8 4s8-2 8-4v-5"/></svg><strong>Browser ini</strong><small>Data tetap tersimpan lokal</small></div></div><span class="diagram-badge">Tidak keluar dari perangkat</span></div></div></section>
+
+    <section id="faq"><div class="container"><header class="section-heading"><span class="section-kicker">Pertanyaan umum</span><h2>Transparan dari awal.</h2></header><div class="faq-grid"><details><summary>Apakah skor JagoanCV sama dengan skor ATS perusahaan?</summary><p>Tidak. Skor kesiapan JagoanCV adalah panduan transparan berdasarkan struktur, kelengkapan, kualitas konten, dan konsistensi. Skor ini bukan skor resmi Workday, Greenhouse, atau vendor ATS lainnya.</p></details><details><summary>Di mana CV dan deskripsi lowongan saya disimpan?</summary><p>Data disimpan secara lokal di browser pada perangkat yang sedang digunakan. Isinya tidak dikirim ke backend JagoanCV.</p></details><details><summary>Apakah JagoanCV bisa digunakan lewat HP?</summary><p>Bisa. Pada layar kecil, editor, preview A4, dan pemeriksaan ditampilkan sebagai tiga tampilan fokus. Karena penyimpanannya local-first, dokumen tetap berada di browser HP tersebut dan belum disinkronkan ke perangkat lain.</p></details><details><summary>Apakah saya bisa membuat dokumen dalam English?</summary><p>Bisa. Bahasa antarmuka dan bahasa dokumen dapat dipilih secara terpisah, dan tersedia contoh CV dalam Bahasa Indonesia maupun English.</p></details></div></div></section>
+
+    <section class="final-section"><div class="container final-cta"><h2>Lamaran berikutnya bisa dimulai sekarang.</h2><p>Buka editor, susun dokumenmu, lalu periksa semuanya sebelum menekan tombol kirim.</p><div class="hero-actions"><a class="button" href="./editor.html">Mulai buat CV <span aria-hidden="true">→</span></a></div></div></section>
   </main>
 
-  <a class="support-link" href="https://saweria.co/budimanr3101" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" data-i18n-aria="support.aria" aria-label="Thanks to me melalui Saweria, terbuka di tab baru">
-    <span class="support-copy"><strong>Thanks to me</strong><small data-i18n="support.via">via Saweria</small></span>
-    <span class="support-coin" aria-hidden="true">Rp</span>
-  </a>
-
-  <div class="print-root" id="print-root" aria-hidden="true"></div>
-  <noscript data-i18n="noscript">Aplikasi membutuhkan JavaScript untuk mengedit dan menyimpan CV secara lokal.</noscript>
-  <script type="module" src="./js/editor-main.js"></script>
+  <footer><div class="container footer-row"><a class="brand" href="#top"><svg class="brand-mark" viewBox="0 0 256 256" aria-hidden="true"><rect x="16" y="16" width="224" height="224" rx="54" fill="#2468AD"/><path d="M66 50h82l42 42v112a12 12 0 0 1-12 12H66a12 12 0 0 1-12-12V62a12 12 0 0 1 12-12Z" fill="#F8FBFF"/><path d="m77 166 28 27 70-75" fill="none" stroke="#35A37A" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-copy"><strong>JagoanCV</strong><small>CV ATS Generator</small></span></a><p>Generator CV ATS dan surat lamaran gratis · data pengguna tetap lokal.</p><div class="footer-links"><a href="./en/" lang="en" hreflang="en">English</a><a href="#privasi">Privasi</a><a href="https://saweria.co/budimanr3101" target="_blank" rel="noopener noreferrer">Dukung via Saweria</a></div></div></footer>
 </body>
 </html>

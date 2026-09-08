@@ -1,0 +1,19 @@
+<!-- BRIEF: JagoanCV production icon — selected Bold Energik direction in the approved Powder Blue + Mint system: powder tile, deep-blue J, mint-teal forward check, and soft coral energy accent; readable at 24–42px. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">JagoanCV</title>
+  <desc id="desc">Huruf J biru gelap dengan tanda centang mint-teal pada bidang powder blue.</desc>
+  <g id="tile">
+    <rect x="16" y="16" width="224" height="224" rx="54" fill="#CFE9F1"/>
+    <path d="M190 16h-31l81 81V70c0-30-24-54-50-54Z" fill="#B8DCE7"/>
+  </g>
+  <g id="letter-j">
+    <path d="M105 55h89v83c0 52-30 81-79 81-39 0-66-21-73-57l43-12c4 19 14 29 31 29 21 0 33-14 33-42V98h-44Z" fill="#244752"/>
+  </g>
+  <g id="forward-check">
+    <path d="M39 148 80 190 145 121 165 140 81 224 20 166Z" fill="#397563"/>
+    <path d="m145 121 48-3-5 47-18-18 18-18-26 3Z" fill="#397563"/>
+  </g>
+  <g id="energy-accent">
+    <rect x="194" y="183" width="25" height="25" rx="8" fill="#C86F55"/>
+  </g>
+</svg>

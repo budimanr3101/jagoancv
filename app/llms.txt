@@ -1,0 +1,37 @@
+# JagoanCV
+
+> JagoanCV is a free, local-first web application for building CVs and cover letters, reviewing transparent ATS-readiness guidance, and exporting text-based PDFs.
+
+Canonical site: https://jagoancv.pages.dev/
+
+## Public pages
+
+- [Bahasa Indonesia](https://jagoancv.pages.dev/): Primary Indonesian landing page.
+- [English](https://jagoancv.pages.dev/en/): English landing page with the same product capabilities.
+- [Editor](https://jagoancv.pages.dev/editor.html): Interactive CV and cover-letter workspace. This workspace is marked `noindex,follow` and is intentionally excluded from the sitemap.
+
+## Product capabilities
+
+- Guided CV creation in six sections.
+- Cover-letter creation in the same workspace.
+- A4 preview and text-based PDF export.
+- Transparent CV-readiness checks for structure, completeness, content quality, and consistency.
+- Keyword coverage calculated and displayed separately from the readiness score.
+- Indonesian and English interface and document languages.
+- Responsive editor, preview, and check views for mobile and desktop browsers.
+- Automatic local saving without an account.
+
+## Data and privacy
+
+CV content and job descriptions are stored in the current browser's local storage. They are not sent to a JagoanCV backend for processing. Cross-device synchronization is not available, so data remains in the browser and device where it was created.
+
+## Important limitations
+
+- The JagoanCV readiness score is explanatory guidance, not an official score from Workday, Greenhouse, or any other ATS vendor.
+- JagoanCV does not guarantee that a CV will pass an ATS or result in an interview.
+- Keyword coverage is a separate text-matching aid and is not folded into the readiness score.
+- All current product features are free. The optional Saweria link is for support and does not unlock features.
+
+## Discovery note
+
+This `llms.txt` file is a supplemental machine-readable summary. Canonical metadata, `hreflang`, `robots.txt`, and `sitemap.xml` remain the standard discovery and indexing controls.

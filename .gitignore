@@ -9,3 +9,6 @@ node_modules/
 
 # Local editor/tooling
 *.log
+
+# Generated clean release output
+dist/

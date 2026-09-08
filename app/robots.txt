@@ -1,0 +1,5 @@
+# JagoanCV public website
+User-agent: *
+Allow: /
+
+Sitemap: https://jagoancv.pages.dev/sitemap.xml
