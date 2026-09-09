@@ -20,7 +20,7 @@ test("preview always renders the clean sans class", () => {
 });
 
 test("production shell and stylesheet expose no typography selector or serif theme", async () => {
-  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const html = await readFile(new URL("../editor.html", import.meta.url), "utf8");
   const css = await readFile(new URL("../styles.css", import.meta.url), "utf8");
   assert.doesNotMatch(html, /template-select|Klasik Serif/);
   assert.doesNotMatch(css, /header-template|theme-classic-serif/);

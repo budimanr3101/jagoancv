@@ -48,7 +48,7 @@ test("the exemption list stays honest about which files exist", async () => {
 });
 
 test("the shell declares a key for every language-dependent accessible label", async () => {
-  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const html = await readFile(new URL("../editor.html", import.meta.url), "utf8");
   const ariaLabels = [...html.matchAll(/<([a-z]+)([^>]*\baria-label="[^"]+"[^>]*)>/g)];
   const unkeyed = ariaLabels
     .filter(([, , attrs]) => !attrs.includes("data-i18n-aria"))

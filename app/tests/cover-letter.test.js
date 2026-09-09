@@ -95,7 +95,7 @@ test("cover-letter content alone makes a document non-empty", () => {
 
 
 test("header exposes the segmented document switcher with pressed state", async () => {
-  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const html = await readFile(new URL("../editor.html", import.meta.url), "utf8");
   assert.match(html, /class="doc-switch" role="group"/);
   assert.match(html, /data-doc-mode="cv" aria-pressed="true"/);
   assert.match(html, /data-doc-mode="cover-letter" aria-pressed="false"/);
@@ -354,7 +354,7 @@ test("the CV panel keeps its own wording and score untouched", () => {
 
 
 test("the language control is labelled as document scope, not interface scope", async () => {
-  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const html = await readFile(new URL("../editor.html", import.meta.url), "utf8");
   assert.match(html, /<label class="settings-row" for="document-locale"><span data-i18n="settings\.documentLanguage">Bahasa dokumen<\/span>/,
     "the label must be visible so it is not mistaken for an app-language switch");
   assert.match(html, /for="language-select"><span data-i18n="settings\.appLanguage">/,
@@ -363,7 +363,7 @@ test("the language control is labelled as document scope, not interface scope", 
 });
 
 test("navbar keeps one primary action and moves the rest where they belong", async () => {
-  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const html = await readFile(new URL("../editor.html", import.meta.url), "utf8");
   const header = html.slice(html.indexOf("<header"), html.indexOf("</header>"));
   assert.match(header, /id="pdf-button"/, "the primary action stays in the header");
   assert.match(header, /id="settings-button"[^>]*aria-expanded="false"[^>]*aria-controls="settings-panel"/);

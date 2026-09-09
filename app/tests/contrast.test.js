@@ -84,3 +84,28 @@ test("both text tokens clear WCAG AA on every surface they sit on", async () => 
     assert.ok(contrast(fg, bg) >= 4.5, `${name} = ${contrast(fg, bg).toFixed(2)}:1, below WCAG AA 4.5:1`);
   }
 });
+
+const EDITORIAL_CSS = new URL("../editorial-split.css", import.meta.url);
+
+test("Saweria support ticket keeps its title and subtitle WCAG AA across the gradient", async () => {
+  const css = await readFile(EDITORIAL_CSS, "utf8");
+  const block = css.match(/\/\* Saweria Ticket[\s\S]*?\.support-link\{([^}]*)\}/)?.[1];
+  assert.ok(block, "the final Saweria Ticket rule must exist");
+  const colour = (name) => block.match(new RegExp(`--${name}:(#[0-9a-fA-F]{6})`))?.[1];
+  const ink = colour("support-ink");
+  const muted = colour("support-muted");
+  const amber = colour("support-amber");
+  const amberSoft = colour("support-amber-soft");
+  const coin = colour("support-coin");
+  for (const [name, foreground, background] of [
+    ["title on amber", ink, amber],
+    ["title on amber-soft", ink, amberSoft],
+    ["subtitle on amber", muted, amber],
+    ["subtitle on amber-soft", muted, amberSoft],
+    ["Rp on coin", ink, coin],
+  ]) {
+    assert.ok(foreground && background, `${name} colours must be declared`);
+    assert.ok(contrast(foreground, background) >= 4.5,
+      `${name} = ${contrast(foreground, background).toFixed(2)}:1, below WCAG AA 4.5:1`);
+  }
+});

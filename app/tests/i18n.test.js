@@ -118,7 +118,7 @@ test("static translation rewrites text and aria labels only where keys are decla
 });
 
 test("every declared key in the shell exists in both dictionaries", async () => {
-  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const html = await readFile(new URL("../editor.html", import.meta.url), "utf8");
   const keys = [...html.matchAll(/data-i18n(?:-aria)?="([^"]+)"/g)].map((match) => match[1]);
   assert.ok(keys.length >= 25, `expected the shell to be keyed, found ${keys.length}`);
   for (const key of new Set(keys)) {
@@ -128,7 +128,7 @@ test("every declared key in the shell exists in both dictionaries", async () => 
 });
 
 test("the issue counters are not destroyed by translating their tab labels", async () => {
-  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const html = await readFile(new URL("../editor.html", import.meta.url), "utf8");
   assert.match(html, /<span data-i18n="view\.check">[^<]*<\/span> <span id="issue-count">/);
   assert.match(html, /<span data-i18n="view\.check">[^<]*<\/span> <span id="mobile-issue-count">/);
 });

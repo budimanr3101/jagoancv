@@ -1,0 +1,22 @@
+{
+  "id": "/",
+  "name": "JagoanCV — Generator CV ATS & Surat Lamaran",
+  "short_name": "JagoanCV",
+  "description": "Buat CV dan surat lamaran, periksa kesiapan ATS secara transparan, lalu ekspor PDF dengan data yang tetap tersimpan lokal di browser.",
+  "lang": "id",
+  "dir": "ltr",
+  "start_url": "/editor.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f3fafd",
+  "theme_color": "#cfe9f1",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/assets/jagoancv-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,10 +1,13 @@
 {
-  "name": "siaplamar",
+  "name": "jagoancv",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node --check app/js/model.js && node --check app/js/storage.js && node --check app/js/backup.js && node --check app/js/store.js && node --check app/js/main.js && node --check app/js/entry-actions.js && node --check app/js/completeness.js && node --check app/js/editor.js && node --check app/js/editor-copy.js && node --check app/js/preview.js && node --check app/js/ats-checker.js && node --check app/js/keyword-match.js && node --check app/js/ats-score.js && node --check app/js/checker-view.js && node --check app/js/pdf-export.js && node --check app/js/theme.js && node --check app/js/cover-letter.js && node --check app/js/letter-checks.js && node --check app/js/i18n.js && node --check app/js/editor-main.js",
-    "test": "node --test app/tests/*.test.js"
+    "check": "node --check app/js/model.js && node --check app/js/storage.js && node --check app/js/backup.js && node --check app/js/store.js && node --check app/js/main.js && node --check app/js/entry-actions.js && node --check app/js/completeness.js && node --check app/js/editor.js && node --check app/js/editor-copy.js && node --check app/js/preview.js && node --check app/js/ats-checker.js && node --check app/js/keyword-match.js && node --check app/js/ats-score.js && node --check app/js/checker-view.js && node --check app/js/pdf-export.js && node --check app/js/theme.js && node --check app/js/cover-letter.js && node --check app/js/letter-checks.js && node --check app/js/i18n.js && node --check app/js/editor-main.js && node --check app/landing.js && node --check scripts/build-release.mjs",
+    "test": "node --test app/tests/*.test.js",
+    "test:seo": "node --test --test-concurrency=1 app/tests/seo.test.js",
+    "test:release": "node --test --test-concurrency=1 app/tests/release.test.js",
+    "build:release": "node scripts/build-release.mjs"
   }
 }

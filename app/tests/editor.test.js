@@ -109,7 +109,7 @@ test("month formatting follows selected CV language", () => {
 });
 
 test("application entry page exposes editor, preview, mobile, and check surfaces", async () => {
-  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const html = await readFile(new URL("../editor.html", import.meta.url), "utf8");
   for (const id of ["step-list", "editor-root", "preview-root", "check-root", "mobile-step-select", "completion-value"]) {
     assert.match(html, new RegExp(`id=["']${id}["']`));
   }

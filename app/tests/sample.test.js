@@ -91,7 +91,7 @@ test("clearing the document keeps the chosen document language", () => {
 
 test("the sidebar offers a sample-language selector next to the button", async () => {
   const { readFile } = await import("node:fs/promises");
-  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const html = await readFile(new URL("../editor.html", import.meta.url), "utf8");
   const actions = html.slice(html.indexOf('class="data-actions"'), html.indexOf("</aside>"));
   assert.match(actions, /for="sample-locale"><span data-i18n="action\.sampleLanguage">/);
   assert.match(actions, /<option value="id" data-i18n="language\.id">/);

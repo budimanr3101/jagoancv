@@ -7,8 +7,8 @@ export const DEFAULT_LANGUAGE = "id";
 export const DICTIONARIES = Object.freeze({
   id: {
     "brand.tagline": "CV ATS Generator",
-    "brand.home": "SiapLamar beranda",
-    "app.title": "SiapLamar — Generator CV ATS",
+    "brand.home": "JagoanCV beranda",
+    "app.title": "JagoanCV — Generator CV ATS",
     "print.unavailable": "Fitur print browser tidak tersedia.",
     "doc.cv": "CV",
     "doc.letter": "Surat Lamaran",
@@ -137,8 +137,8 @@ export const DICTIONARIES = Object.freeze({
   },
   en: {
     "brand.tagline": "ATS CV Generator",
-    "brand.home": "SiapLamar home",
-    "app.title": "SiapLamar — ATS CV Generator",
+    "brand.home": "JagoanCV home",
+    "app.title": "JagoanCV — ATS CV Generator",
     "print.unavailable": "Browser printing is not available.",
     "doc.cv": "CV",
     "doc.letter": "Cover Letter",

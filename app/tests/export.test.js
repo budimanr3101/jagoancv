@@ -46,7 +46,7 @@ test("print stylesheet defines A4, clean page breaks, and visible links", async 
 });
 
 test("application exposes PDF action and dedicated print root", async () => {
-  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const html = await readFile(new URL("../editor.html", import.meta.url), "utf8");
   assert.match(html, /id="pdf-button"/);
   assert.match(html, /id="print-root"/);
 });
