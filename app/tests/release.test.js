@@ -57,6 +57,8 @@ test("clean release follows all public entry points and production dependencies"
 
   for (const sourceOnly of [
     "assets/jagoancv-social.svg",
+    "assets/siaplamar-social.png",
+    "assets/siaplamar-social.svg",
     "js/backup.js",
     "js/main.js",
   ]) {

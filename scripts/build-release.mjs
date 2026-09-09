@@ -25,6 +25,7 @@ export const REQUIRED_RELEASE_FILES = Object.freeze([
   "landing.css",
   "landing.js",
   "styles.css",
+  "editorial-split.css",
   "assets/jagoancv-icon.svg",
   "assets/jagoancv-social.png",
   "js/editor-main.js",
